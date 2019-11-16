@@ -1,0 +1,24 @@
+.check-up-class {
+    list-style-type: none;
+    margin: 0rem;
+    padding: 0rem;
+    font-size: 0rem;
+}
+.check-up-class li {
+    margin: 0rem;
+    margin-right: 2rem;
+    padding: 0rem;
+    display: inline-block;
+}
+.check-up-class li a {
+    font-size: 1.6rem;
+    padding: 0.4rem 2rem 0.6rem;
+    border-radius: 4rem;
+    background-color: #EEEEEE;
+    color: #999999;
+}
+.check-up-class li a:hover {
+    background-color: #078E43;
+    color: #ffffff;
+    text-decoration: none !important;
+}

@@ -1,0 +1,32 @@
+.di-title-container p,
+.di-title-container h1, .di-title-container h2, .di-title-container h3
+.di-title-container h4, .di-title-container h5 {
+    margin: 0rem;
+    padding: 0rem;
+}
+
+.di-title-container .en-name {
+    font-size: 3rem;
+    color: #333333;
+    font-weight: bold;
+    padding-bottom: 1.6rem;
+}
+
+.di-title-container .cn-name {
+    font-size: 3rem;
+    color: #333333;
+    font-weight: normal;
+}
+
+.di-title-container .line-b-after {
+    position: relative;
+    margin-bottom: 1rem;
+}
+.di-title-container .line-b-after:after {
+    content: "";
+    position: absolute;
+    left: 28%;
+    right: 52%;
+    bottom: 0rem;
+    border-bottom: 0.4rem solid #078E43;
+}

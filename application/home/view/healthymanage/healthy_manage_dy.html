@@ -1,0 +1,52 @@
+    <link rel="stylesheet" href="/static/pv1/css/01.normalize.css" />
+    <link rel="stylesheet" href="/static/pv1/css/02.base.css" />
+    <link rel="stylesheet" href="/static/pv1/css/03.multiplexing.css" />
+    <link rel="stylesheet" href="/static/pv1/css/healthy-manage.css" />
+    <link rel="stylesheet" href="/static/pv1/css/information-details.css" />
+{include file="Public/header" /}
+<div class="di-banner-container" style="background-image:url('/static/images/zixun/banner-zixun.png')">
+    <div class="di-container">
+        <div class="left-wrap">
+            <p>Information</p>
+            <p>资讯动态</p>
+        </div>
+        <div class="right-wrap">
+            <p>健康医疗，标准化健康管理</p>
+        </div>
+    </div>
+</div>
+<div class="di-bread-crumbs">
+    <div class="di-container">
+        <ul class="crumbs-list">
+            <li>您的当前位置</li>
+            <li><a href="/">大爱无疆</a></li>
+            <li><a href="{:url('/home/informationdynamics')}?ctoken={$val.datoken}">健康管理</a></li>
+            <li><a href="">定义</a></li>
+        </ul>
+    </div>
+</div>
+<div id="ServiceSubject">
+    <div class="di-container el-mt-20">
+        <div class="di-row el-mb-20 di-title" v-for="item in dataset">
+            <div class="di-title-container">健康管理的定义</div>
+            <hr>
+        </div>
+        <div class="di-row el-mb-20 di-container-content">
+            <p>健康管理是指对健康人群、亚健康人群、疾病患者群的健康因素进行全面检测、分析、评估，并提供健康咨询和指导以及对健康危险因素进行干预的过程。预防或解决隐藏在人群中可能引起疾病的危险因素。其宗旨是调动个人及集体的积极性，充分利用有效的资源达到最大的健康改善效果。它是基于个人健康档案基础上的个性化健康事务管理服务，是建立在现代生物医学和信息化管理技术的模式上，从生物、心理、社会的角度对每个人进行全面的健康管理服务。</p>
+<p>早在1970年末，美国的商业保险公司率先向自己的保险客户推出了“健康管理”的服务。从“费用控制”的角度，并配以低成本的诊疗手段，在很大程度上提高了投保人群的健康状况，降低了医疗费用。这一系列举措使得政府和学术界认知了健康管理作为一门新兴学科，成为横跨经济管理学、伦理学、社会学、心理学和医学等多领域的边缘科学。</p>
+<!--            <hr>-->
+        </div>
+        <div class="di-row di-page">
+            {if $upagecolumn!=""}
+                <div class="previous"><a href="{:url('/home/informationdetails')}?ctoken={$upagecolumn.datoken}">上一篇：{$upagecolumn.title}</a></div>
+            {/if}
+            {if $npagecolumn!=""}
+                <div class="next"><a href="{:url('/home/informationdetails')}?ctoken={$npagecolumn.datoken}">下一篇：{$npagecolumn.title}</a></div>
+            {/if}
+        </div>
+    </div>
+</div>
+<div class="di-footer">
+    <img class="dif-line" src="/static/images/home/footer-line.png" />
+</div>
+    {include file="Public/footer" /}

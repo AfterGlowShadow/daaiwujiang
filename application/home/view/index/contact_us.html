@@ -1,0 +1,324 @@
+    <link rel="stylesheet" href="/static/pv1/css/01.normalize.css" />
+
+    <link rel="stylesheet" href="/static/pv1/css/02.base.css" />
+
+    <link rel="stylesheet" href="/static/pv1/css/03.multiplexing.css" />
+
+    <link rel="stylesheet" href="/static/pv1/css/04.title-style.css" />
+
+    <link rel="stylesheet" href="/static/pv1/css/healthy-manage.css" />
+
+    <link rel="stylesheet" href="/static/pv1/css/contact-us.css" />
+
+{include file="Public/header" /}
+
+<style>
+    .tianjia{
+        width: auto;
+        min-width: auto;
+        max-width: initial;
+    }
+</style>
+<script type="text/javascript">
+
+function test(name){
+
+    var traget=document.getElementById("fenbu1");
+
+    traget.style.display="none";
+
+    traget=document.getElementById("fenbu0");
+
+    traget.style.display="none";
+
+    traget=document.getElementById("fenbu2");
+
+    traget.style.display="none";
+
+    traget=document.getElementById("fenbu3");
+
+    traget.style.display="none";
+
+    traget=document.getElementById(name);
+
+    traget.style.display="block";
+
+    traget=document.getElementById(name);
+
+    name=name+"img";
+    var traget=document.getElementById("fenbu1img");
+
+    traget.style.display="none";
+
+    traget=document.getElementById("fenbu0img");
+
+    traget.style.display="none";
+
+    traget=document.getElementById("fenbu2img");
+
+    traget.style.display="none";
+
+    traget=document.getElementById("fenbu3img");
+
+    traget.style.display="none";
+
+    traget=document.getElementById(name);
+
+
+    traget.style.display="block";
+
+    traget=document.getElementById(name);
+}
+
+</script>
+
+<div class="di-banner-container" style="background-image:url('/static/images/contact/banner-lianxi.png')">
+
+    <div class="di-container">
+
+        <div class="left-wrap">
+
+            <p>CONTACT US</p>
+
+            <p>联系我们</p>
+
+        </div>
+
+        <div class="right-wrap">
+
+            <p>健康医疗，标准化健康管理</p>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="di-bread-crumbs">
+
+    <div class="di-container">
+
+        <ul class="crumbs-list">
+
+            <li>您的当前位置</li>
+
+            <li><a href="/">大爱无疆</a></li>
+
+            <li><a href="">联系我们</a></li>
+
+        </ul>
+
+    </div>
+
+</div>
+
+<div class="di-container el-mt-20">
+
+    <div class="di-row el-mb-20">
+
+        <div class="di-col-5">
+
+            <div class="di-title-container">
+
+                <p class="en-name line-b-after">COMPANY ADDRESS</p>
+
+                <h1 class="cn-name">公司地址</h1>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="di-row el-mb-20">
+
+        <div class="di-col-5">
+
+            <div class="di-title-container">
+
+                <img id="fenbu0img" style="width:800px;height:400px;" src="{$qyinfo.addimg}" alt="">
+                <img id="fenbu1img" style="width:800px;height:400px;display:none" src="{$qyinfo.addimg1}" alt="">
+                <img id="fenbu2img" style="width:800px;height:400px;display:none" src="{$qyinfo.addimg2}" alt="">
+                <img id="fenbu3img" style="width:800px;height:400px;display:none" src="{$qyinfo.addimg3}" alt="">
+
+            </div>
+
+        </div>
+
+        <div class="di-col-5 di-col-right">
+
+            <div class="di-navigation">
+
+                <div class="di-container " style="width:auto;min-width:auto;max-width:initial;" >
+
+                    <ul class="n-nav">
+
+                        <li class="n-active fenbu" style="width:25%;padding: 1.6rem 0%;" onclick="test('fenbu0')"><a>大爱无疆集团</a></li>
+
+                        <li class="n-active fenbu" style="width:25%;padding: 1.6rem 0%;" onclick="test('fenbu1')"><a>山东大爱无疆</a></li>
+
+                        <li class="n-active fenbu" style="width:25%;padding: 1.6rem 0%;" onclick="test('fenbu2')"><a>河南大爱无疆</a></li>
+
+                        <li class="n-active fenbu" style="width:25%;padding: 1.6rem 0%;" onclick="test('fenbu3')"><a>河北大爱无疆</a></li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <div>
+
+                <div id="fenbu0">
+
+                    <p>{$qyinfo.name}</p>
+
+                    <p>
+
+                        <img src="/static/images/contact/wz.png" alt="">
+
+                        <span>{$qyinfo.address}</span>
+
+                    </p>
+
+                    <p>
+
+                        <img src="/static/images/contact/tel.png" alt="">
+
+                        <span>客服电话 {$qyinfo.phone}</span>
+
+                    </p>
+
+                    <img src="/static/images/contact/wx.png" alt="">
+
+                    <span>微信二维码</span>
+
+                    </p>
+
+                    <p>
+
+                        <img src="{$qyinfo.mpic}" alt="">
+
+                    </p>
+
+                </div>
+
+                <div style="display: none" id="fenbu1">
+
+                    <p>{$qyinfo.name1}</p>
+
+                    <p>
+
+                        <img src="/static/images/contact/wz.png" alt="">
+
+                        <span>{$qyinfo.address1}</span>
+
+                    </p>
+
+                    <p>
+
+                        <img src="/static/images/contact/tel.png" alt="">
+
+                        <span>客服电话 {$qyinfo.phone1}</span>
+
+                    </p>
+
+                    <img src="/static/images/contact/wx.png" alt="">
+
+                    <span>微信二维码</span>
+
+                    </p>
+
+                    <p>
+
+                        <img src="{$qyinfo.mpic}" alt="">
+
+                    </p>
+
+                </div>
+
+                <div style="display: none" id="fenbu2">
+
+                    <p>{$qyinfo.name2}</p>
+
+                    <p>
+
+                        <img src="/static/images/contact/wz.png" alt="">
+
+                        <span>{$qyinfo.address2}</span>
+
+                    </p>
+
+                    <p>
+
+                        <img src="/static/images/contact/tel.png" alt="">
+
+                        <span>客服电话 {$qyinfo.phone2}</span>
+
+                    </p>
+
+                    <img src="/static/images/contact/wx.png" alt="">
+
+                    <span>微信二维码</span>
+
+                    </p>
+
+                    <p>
+
+                        <img src="{$qyinfo.mpic}" alt="">
+
+                    </p>
+
+                </div>
+
+                <div style="display: none" id="fenbu3">
+
+                    <p>{$qyinfo.name3}</p>
+
+                    <p>
+
+                        <img src="/static/images/contact/wz.png" alt="">
+
+                        <span>{$qyinfo.address3}</span>
+
+                    </p>
+
+                    <p>
+
+                        <img src="/static/images/contact/tel.png" alt="">
+
+                        <span>客服电话 {$qyinfo.phone3}</span>
+
+                    </p>
+
+                    <p>
+
+                    <img src="/static/images/contact/wx.png" alt="">
+
+                    <span>微信二维码</span>
+
+                    </p>
+
+                    <p>
+
+                        <img src="{$qyinfo.mpic}" alt="">
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="di-footer">
+
+    <img class="dif-line" src="/static/images/home/footer-line.png" />
+
+</div>
+
+    {include file="Public/footer" /}

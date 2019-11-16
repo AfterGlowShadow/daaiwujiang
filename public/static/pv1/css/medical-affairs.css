@@ -1,0 +1,44 @@
+.medical-affairs{
+
+}
+.h-panel-three {
+    width: 32%;
+    /*margin: 6rem -1.6rem 0rem;*/
+    /*margin: 0 2rem;*/
+    overflow: hidden;
+    padding-bottom: 2.8rem;
+    float: left;
+}
+.middle-column{
+    margin: 0 2%;
+}
+.h-panel-three .h-three-margin {
+    /*text-align: center;*/
+    /*padding-top: 10rem;*/
+    /*padding: 1.6rem;*/
+    box-sizing: border-box;
+    color: #333333;
+}
+.h-panel-three p{
+    margin: 0;
+}
+.di-panel-container span{
+    font-size: 2rem;
+    color:rgba(51,51,51,1);
+}
+.di-panel-content{
+    font-size:1.5rem;
+    font-weight:400;
+    color: #333333;
+    margin: 0 auto;
+    line-height:230%;
+    background: #F4F8F6;
+    padding: 2.4rem;
+    margin-bottom: 2.8rem;
+    margin-top: -0.5rem;
+}
+.di-panel-content .di-panel-content-title{
+    font-size:2.4rem;
+    font-weight:400;
+    color:rgba(51,51,51,1);
+}

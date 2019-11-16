@@ -1,0 +1,80 @@
+<footer class="di-footer-nav">
+
+		<div class="di-container fence-container">
+
+			<div class="left-container">
+
+				{if count($column) > 0}
+
+					{volist name="column" id="val"}
+
+						{if condition="$val.name neq '首页'"}
+
+							{if condition="$val.name neq '资讯动态'"}
+
+							<dl class="average-item">
+
+								<dt>{$val.name}</dt>
+
+								{volist name="val.child" id="val1"}
+
+									<dd><a href="{:url($val1['url'])}?ctoken={$val1.datoken}">{$val1.name}</a></dd>
+
+								{/volist}
+
+							</dl>
+
+							{/if}
+
+						{/if}
+
+					{/volist}
+
+				{/if}
+
+			</div>
+
+			<div class="right-container">
+
+				<ul class="contact-list">
+
+					<li>
+
+						<img src="{$qyinfo.mpic}" />
+
+					</li>
+
+					<li class="number">微信公众号：{$qyinfo.wxgzh}</li>
+
+					<li class="text">地址：{$qyinfo.address}</li>
+
+					<!-- <li class="text-spacing">东胜广场 A 座 8 层</li> -->
+
+					<li class="text">联系电话：{$qyinfo.phone}</li>
+
+				</ul>
+
+			</div>
+
+		</div>
+
+		<hr class="hr-line" />
+
+		<div class="di-container signature">
+
+			<p>{$qyinfo.name}</p>
+
+			<p>2019 http://www.biglovewj.com All Right Reserved</p>
+
+		</div>
+
+	</footer>
+
+	<!-- <script src="/home/js/manifest.min.js"></script> -->
+
+</body>
+
+
+
+</html>
+

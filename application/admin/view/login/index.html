@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title><?php echo config('WebName');?>后管</title>
+		  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+		<link rel="stylesheet" href="__STATIC__/admin/css/login.css">
+		<script src="__STATIC__/public/js/jquery.js"></script>
+		<script src="__STATIC__/public/js/layer.js"></script>
+<style type="text/css">
+		.header{
+			width: 100%;
+			height: 50px;
+			/*background: #666;*/
+			background: rgba(105,105,105,0.3);
+		}
+		.htitle{
+
+			margin-left: 20%;
+		}
+		.htitle span{
+
+			font-size: 1.5em;
+
+			line-height: 50px;
+
+			color: white;
+		}
+	</style>
+		<script>
+			$(function(){
+				$("#verify_img").click(function() {
+				 var verifyURL = "{:url('/admin/getimgValidate')}"+'?random='+Math.round(Math.random()*10);
+				$("#verify_img").attr({
+				"src" : verifyURL 
+				});
+				});
+				$(".loginbtn").click(function(){
+					if($(".username").val()=="")
+					{
+						layer.tips('用户名不能为空','.username');
+						return false;
+					}
+					else if($(".passwd").val()=="")
+					{
+						layer.tips('用户密码不能为空','.passwd');
+						return false;
+					}
+					else if($(".yzm").val()==""){
+						layer.tips('验证码不能为空','.yzm');
+						return false;
+					}
+					else{
+						var res=$(".myform").serialize();
+						$.ajax({
+							type: "post",
+							dataType: "text",
+							url: "{:url('/admin/islogin')}",
+							data: res,
+							success: function (data) {
+								console.log(data);
+								data=JSON.parse(data);
+                                 if(data['code']=="200")
+                                 {
+                                 	layer.alert(data["msg"],function(){
+                                 		window.location.href="{:url('/admin/home')}";
+                                 	})
+                                 }
+                                 else if(data['code']!="200"){
+                                 	layer.alert(data['msg']);
+                                 	return false;
+                                 }
+                                 else{
+                                 	layer.alert("网络错误");
+                                 	return false;
+                                 }
+							}
+						})
+					}
+				})
+			})
+		</script>
+	</head>
+	<body>
+	<script>
+	function loginnb(){
+		var w=$(window).width();
+       	var h=$(window).height();
+       	$("body").css('height',h);
+       	var w1=$(".box").width();
+       	var h1=$(".box").height();  
+       	var w2=(w-w1-80)/2;
+       	var h2=(h-h1-80)/2;     	
+       	$(".box").css('left',w2);
+       	$(".box").animate({top:h2});
+	}
+       $(function(){
+       	 loginnb();
+       })
+       $(window).resize(function() {
+		  loginnb();
+		});
+	</script>
+		<div class="box">
+		<form action="{:url('/home/upfile')}" method="post" enctype="multipart/form-data">
+		<input type="file" name="image">
+		<input type="submit" value="上传">
+	</form>
+			<h1><?php echo config('WebName');?>登录</h1>
+			<form class="myform">
+			<div class="fullrow"><input   type="text" placeholder="请输入用户名" name="username" class="wqint username"><div class="clear"></div></div>
+			<div class="fullrow">
+				
+				<input  type="text" placeholder="请输入密码" name="passwd" class="wqint passwd" onfocus=" this.type='password';">
+				<div class="clear"></div></div>
+			<div class="fullrow" style="width:30%; float:left; "><input style="width:76%" placeholder="验证码" type="text" name="yzm" class="wqintl yzm"><div class="clear"></div></div><img style="width:50%px;height:43px;float:right;" src="{:url('/admin/getimgValidate')}"  class="verifyimg"  id="verify_img"><div class="clear"></div>
+	        </form>                                             
+			<button type="button" class="loginbtn">登 录</button>
+</div>
+</body>
+</html>

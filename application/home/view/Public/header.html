@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>大爱无疆</title>
+<style>
+.updatelogo1{
+	margin-left:10%;
+	width:38%
+}
+.updatelogo2{
+	margin-right:10%;
+	width:38%
+}
+</style>
+</head>
+
+<body>
+	<header class="di-header-container">
+		<div class="di-container di-header-wrap">
+			<div class="n-logo updatelogo1">
+				<img src="{$qyinfo.logo}" style="width:100%"/>
+			</div>
+			<div class="n-tel updatelogo2">
+				<img src="{$qyinfo.telpic}" style="width:100%" />
+			</div>
+		</div>
+		
+		<div class="di-navigation" style="background-color: #797b82;">
+			<div class="di-container">
+				<ul class="n-nav">
+					{if count($column) > 0}
+						{volist name="column" id="val"}
+								<li class="n-active">
+								<a href="{:url($val['url'])}?ctoken={$val.datoken}" style="color:white">{$val.name}</a>
+								{if condition="$val.name neq '首页'"}
+									{if condition="$val.name neq '资讯动态'"}
+										<ul class="">
+											{volist name="val.child" id="val1"}
+												{if condition="$val.name eq '体检服务' or $val.name eq '联系我们'"}
+													<li class="n-active"><a href="{:url($val1['url'])}?ctoken={$val1.datoken}">{$val1.name}</a></li>
+												{else/}
+													<li class="n-active"><a href="{:url($val1['url'])}">{$val1.name}</a></li>
+												{/if}
+											{/volist}
+										</ul>
+									{/if}
+								{/if}
+							</li>
+						{/volist}
+					{/if}
+				</ul>
+			</div>
+		</div>
+<!-- {if count($column) > 0}
+					{volist name="column" id="val"}
+						{if condition="$val.name neq '首页'"}
+
+							{if condition="$val.name neq '资讯动态'"}
+							<dl class="average-item">
+								<dt>{$val.name}</dt>
+								{volist name="val.child" id="val1"}
+									<dd><a href="{:url($val1['url'])}?ctoken={$val1.datoken}">{$val1.name}</a></dd>
+								{/volist}
+							</dl>
+							{/if}
+						{/if}
+					{/volist}
+				{/if} -->
+			<!-- <div class="di-container">
+				<ul class="n-nav">
+					{if count($column) > 0}
+						{volist name="column" id="val"}
+							{if condition="$val.name eq $pagename"}
+									<li class="n-active"><a href="{:url($val['url'])}?ctoken={$val.datoken}">{$val.name}</a></li>
+								{else}
+									<li ><a href="{:url($val['url'])}?ctoken={$val.datoken}">{$val.name}</a></li>
+							{/if}
+						{/volist}
+					{/if}
+				</ul>
+			</div>
+		</div> -->
+
+	
+	</header>

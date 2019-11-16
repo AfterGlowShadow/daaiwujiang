@@ -1,0 +1,92 @@
+    <link rel="stylesheet" href="/static/pv1/css/01.normalize.css" />
+    <link rel="stylesheet" href="/static/pv1/css/02.base.css" />
+    <link rel="stylesheet" href="/static/pv1/css/03.multiplexing.css" />
+    <link rel="stylesheet" href="/static/pv1/css/enterprise-recruitment.css" />
+    <link rel="stylesheet" href="/static/pv1/css/service-checkup.css" />
+{include file="Public/header" /}
+<div class="di-banner-container" style="background-image:url('/static/images/contact/banner-lianxi.png')">
+    <div class="di-container">
+        <div class="left-wrap">
+            <p>RECRUITMENT</p>
+            <p>企业招聘</p>
+        </div>
+        <div class="right-wrap">
+            <p>健康医疗，标准化健康管理</p>
+        </div>
+    </div>
+</div>
+<div class="di-bread-crumbs">
+    <div class="di-container">
+        <ul class="crumbs-list">
+            <li>您的当前位置</li>
+            <li><a href="/">大爱无疆</a></li>
+            <li><a href="">联系我们</a></li>
+            <li><a href="">企业招聘</a></li>
+        </ul>
+    </div>
+</div>
+<div id="ServiceSubject">
+    <div class="di-container el-mt-40 el-mb-40">
+        <ul class="check-up-class">
+            {if count($recruitlist) > 0}
+                {volist name="recruitlist" id="val"}
+                    <li><a href="{:url('/home/enterpriserecruitment')}?ctoken={$val.datoken}" v-on:click="controllerRequestDataset('1')">{$val.name}</a></li>
+<!--                    <li><a href="javascript:void(0);">市场推广专员</a></li>-->
+<!--                    <li><a href="javascript:void(0);">客服人员</a></li>-->
+<!--                    <li><a href="javascript:void(0);">企划专员</a></li>-->
+                {/volist}
+            {/if}
+        </ul>
+    </div>
+    <div class="di-container el-mt-20">
+        <div class=" el-mb-20 di-container-content" v-for="item in dataset">
+            {if $info!="" }
+                <p>
+                    <span class="di-type">{$info.name}</span>
+                    <span>{$info.salary}元/月</span>
+                </p>
+                <p class="">岗位要求</p>
+                <p>
+                    {$info.wordrequire}
+<!--                    <ol>-->
+<!--                        <li>30周岁以上；</li>-->
+<!--                        <li>大专以上学历，医学相关专业毕业，有健康管理师证书；</li>-->
+<!--                        <li>有健康医疗行业经验；</li>-->
+<!--                        <li>可以独立分析、解读医学报告；</li>-->
+<!--                        <li>有医疗职业证优先考虑；</li>-->
+<!--                        <li>有保险公司核保经验优先考虑；</li>-->
+<!--                        <li>熟悉亚健康管理、慢性病管理；</li>-->
+<!--                        <li>对健康产业有兴趣，有一定的认知，有良好的团队协作精神；</li>-->
+<!--                        <li>具有良好的沟通能力，积极乐观，认真踏实，有上进心，懂感恩，爱钻研，责任心强。-->
+<!--                        </li>-->
+<!--                    </ol>-->
+                </p>
+                <p class="">工作内容</p>
+                <div>
+                    {$info.wordinfo}
+<!--                    <ol>-->
+<!--                    <li>熟知健康管理知识、营养学知识、运动学知识、心理学知识以及相关医学知识；</li>-->
+<!--                    <li>负责客户的健康管理服务与指导；</li>-->
+<!--                    <li>通过数据采集、报告解读、对客户进行健康监测、健康风险评估、健康教育、健康干预等健康管理服务；</li>-->
+<!--                    <li>对客户健康档案的建立、归档与维护。</li>-->
+<!--                </ol>-->
+                </div>
+                <p >工作地点</p>
+                <p  class="p-content">
+                    {$info.address}
+                </p>
+                <p >招聘人数</p>
+                <p  class="p-content">
+                    {$info.people}人
+                </p>
+            {/if}
+        </div>
+    </div>
+</div>
+<script src="/static/pv1/js/02.base.js"></script>
+<script src="/static/pv1/js/01.vue.min.js"></script>
+<script src="/static/pv1/js/recruitment.js"></script>
+<div class="di-footer">
+    <img class="dif-line" src="/static/images/home/footer-line.png" />
+</div>
+    {include file="Public/footer" /}

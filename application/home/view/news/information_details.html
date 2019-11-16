@@ -1,0 +1,63 @@
+    <link rel="stylesheet" href="/static/pv1/css/01.normalize.css" />
+    <link rel="stylesheet" href="/static/pv1/css/02.base.css" />
+    <link rel="stylesheet" href="/static/pv1/css/03.multiplexing.css" />
+    <link rel="stylesheet" href="/static/pv1/css/healthy-manage.css" />
+    <link rel="stylesheet" href="/static/pv1/css/information-details.css" />
+{include file="Public/header" /}
+<div class="di-banner-container" style="background-image:url('/static/images/zixun/banner-zixun.png')">
+    <div class="di-container">
+        <div class="left-wrap">
+            <p>Information</p>
+            <p>资讯动态</p>
+        </div>
+        <div class="right-wrap">
+            <p>健康医疗，标准化健康管理</p>
+        </div>
+    </div>
+</div>
+<div class="di-bread-crumbs">
+    <div class="di-container">
+        <ul class="crumbs-list">
+            <li>您的当前位置</li>
+            <li><a href="/">大爱无疆</a></li>
+            <li><a href="{:url('/home/informationdynamics')}?ctoken={$val.datoken}">资讯动态</a></li>
+            <li><a href="">正文</a></li>
+        </ul>
+    </div>
+</div>
+<div id="ServiceSubject">
+    <div class="di-container el-mt-20">
+        <div class="di-row el-mb-20 di-title" v-for="item in dataset">
+            <div class="di-title-container">{$pagecolumn['title']}</div>
+            <div class="di-time">发表时间：{$pagecolumn['create_time']}</div>
+            <hr>
+        </div>
+        <div class="di-row el-mb-20 di-container-content">
+            {$pagecolumn['info']|raw}
+<!--            <p>-->
+<!--                期间，大爱无疆副董事长仝军卓先生致辞，“感谢各位来宾在百忙之中的能参加峰峰服务中心的开业庆典，感谢各位伙伴对大爱无疆的支持与厚爱，大爱无疆峰峰服务中心的开业将是的一个新的里程碑，大爱无疆将不负众望，带领着峰峰服务中心为人民做好健康管理服务，造福峰峰人民给他们带来健康幸福的生活”。期间，大爱无疆副董事长仝军卓先生致辞，“感谢各位来宾在百忙之中的能参加峰峰服务中心的开业庆典，感谢各位伙伴对大爱无疆的支持与厚爱，大爱无疆峰峰服务中心的开业将是的一个新的里程碑，大爱无疆将不负众望，带领着峰峰服务中心为人民做好健康管理服务，造福峰峰人民给他们带来健康幸福的生活”。-->
+<!--                期间，大爱无疆副董事长仝军卓先生致辞，“感谢各位来宾在百忙之中的能参加峰峰服务中心的开业庆典，感谢各位伙伴对大爱无疆的支持与厚爱，大爱无疆峰峰服务中心的开业将是的一个新的里程碑，大爱无疆将不负众望，带领着峰峰服务中心为人民做好健康管理服务，造福峰峰人民给他们带来健康幸福的生活”。期间，大爱无疆副董事长仝军卓先生致辞，“感谢各位来宾在百忙之中的能参加峰峰服务中心的开业庆典，感谢各位伙伴对大爱无疆的支持与厚爱，大爱无疆峰峰服务中心的开业将是的一个新的里程碑，大爱无疆将不负众望，带领着峰峰服务中心为人民做好健康管理服务，造福峰峰人民给他们带来健康幸福的生活”。-->
+<!--                期间，大爱无疆副董事长仝军卓先生致辞，“感谢各位来宾在百忙之中的能参加峰峰服务中心的开业庆典，感谢各位伙伴对大爱无疆的支持与厚爱，大爱无疆峰峰服务中心的开业将是的一个新的里程碑，大爱无疆将不负众望，带领着峰峰服务中心为人民做好健康管理服务，造福峰峰人民给他们带来健康幸福的生活”。-->
+<!--            </p>-->
+<!--            <p class="img">-->
+<!--                <img src="/static/images/healthy-manage/healthy-archives.png" alt="">-->
+<!--            </p>-->
+<!--            <p>-->
+<!--                期间，大爱无疆副董事长仝军卓先生致辞，“感谢各位来宾在百忙之中的能参加峰峰服务中心的开业庆典，感谢各位伙伴对大爱无疆的支持与厚爱，大爱无疆峰峰服务中心的开业将是的一个新的里程碑，大爱无疆将不负众望，带领着峰峰服务中心为人民做好健康管理服务，造福峰峰人民给他们带来健康幸福的生活”。期间，大爱无疆副董事长仝军卓先生致辞，“感谢各位来宾在百忙之中的能参加峰峰服务中心的开业庆典，感谢各位伙伴对大爱无疆的支持与厚爱，大爱无疆峰峰服务中心的开业将是的一个新的里程碑，大爱无疆将不负众望，带领着峰峰服务中心为人民做好健康管理服务，造福峰峰人民给他们带来健康幸福的生活”。-->
+<!--            </p>-->
+<!--            <hr>-->
+        </div>
+        <div class="di-row di-page">
+            {if $upagecolumn!=""}
+                <div class="previous"><a href="{:url('/home/informationdetails')}?ctoken={$upagecolumn.datoken}">上一篇：{$upagecolumn.title}</a></div>
+            {/if}
+            {if $npagecolumn!=""}
+                <div class="next"><a href="{:url('/home/informationdetails')}?ctoken={$npagecolumn.datoken}">下一篇：{$npagecolumn.title}</a></div>
+            {/if}
+        </div>
+    </div>
+</div>
+<div class="di-footer">
+    <img class="dif-line" src="/static/images/home/footer-line.png" />
+</div>
+    {include file="Public/footer" /}

@@ -1,0 +1,43 @@
+    <link rel="stylesheet" href="/static/pv1/css/01.normalize.css" />
+    <link rel="stylesheet" href="/static/pv1/css/02.base.css" />
+    <link rel="stylesheet" href="/static/pv1/css/03.multiplexing.css" />
+    <link rel="stylesheet" href="/static/pv1/css/healthy-manage.css" />
+    <link rel="stylesheet" href="/static/pv1/css/information-details.css" />
+{include file="Public/header" /}
+<div class="di-banner-container" style="background-image:url('/static/images/zixun/banner-zixun.png')">
+    <div class="di-container">
+        <div class="left-wrap">
+            <p>Information</p>
+            <p>健康管理</p>
+        </div>
+        <div class="right-wrap">
+            <p>健康医疗，标准化健康管理</p>
+        </div>
+    </div>
+</div>
+<div class="di-bread-crumbs">
+    <div class="di-container">
+        <ul class="crumbs-list">
+            <li>您的当前位置</li>
+            <li><a href="/">大爱无疆</a></li>
+            <li><a href="{:url('/home/healthymanage')}?ctoken={$val.datoken}">健康管理</a></li>
+            <li><a href="">肿瘤筛查</a></li>
+        </ul>
+    </div>
+</div>
+<div id="ServiceSubject">
+    <div class="di-container el-mt-20">
+        <div class="di-row el-mb-20 di-title" v-for="item in dataset">
+            <div class="di-title-container">肿瘤筛查</div>
+            <hr>
+        </div>
+        <div class="di-row el-mb-20 di-container-content">
+        <p>癌症每年夺去大约600万人的生命并把近10000人致于死亡的边缘，至今得不到有效的控制，成为威胁人类生存的一大难题。由于癌症早期常无特殊症状，甚至毫无症状，故癌症的早期发现、早期诊断主要是通过定期健康体检和人群筛查完成。战胜癌症，早发现是关键，因此，对于肿瘤高危人群及肿瘤患者，采用基因检测技术进行突变检测，有助于癌症的早期诊断、早期评估、早期预防、早期治疗。</p>
+<!--            <hr>-->
+        </div>
+    </div>
+</div>
+<div class="di-footer">
+    <img class="dif-line" src="/static/images/home/footer-line.png" />
+</div>
+    {include file="Public/footer" /}

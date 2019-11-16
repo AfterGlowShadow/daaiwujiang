@@ -1,0 +1,97 @@
+/* .healthy-panel-container {
+    background-color: #F9FBFA;
+    font-size: 0rem;
+}
+
+.healthy-panel-container .left-image {
+    width: 36%;
+    display: inline-block;
+    vertical-align: middle;
+}
+.healthy-panel-container .left-image img {
+    object-fit: cover;
+}
+
+.healthy-panel-container .right-content {
+    width: 64%;
+    padding: 0rem 3.2rem;
+    box-sizing: border-box;
+    display: inline-block;
+    position: relative;
+    font-size: 1.6rem;
+    vertical-align: middle;
+}
+.healthy-panel-container .right-content h4 {
+    margin: 1.6rem 0rem 1.6rem;
+    font-size: 2rem;
+}
+.healthy-panel-container .right-content p {
+    line-height: 230%;
+    margin: 0rem;
+    color: #666666;
+}
+.healthy-panel-container .right-content .decorate {
+    width: 100%;
+    text-align: right;
+    margin: 1rem 0rem;
+    color: #078E43;
+}
+.healthy-panel-container .right-content .decorate a {
+    color: #078E43;
+} */
+
+.healthy-panel-container {
+    display: table;
+    background-color: #F9FBFA;
+    margin-bottom: 3rem;
+    width: 100%;
+}
+
+.healthy-panel-container .left-image {
+    display: table-cell;
+    width: 36%;
+    vertical-align: middle;
+    position: relative;
+}
+.healthy-panel-container .left-image img {
+    position: absolute;
+    top: 0rem;
+    left: 0rem;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.healthy-panel-container .right-content {
+    display: table-cell;
+    width: 64%;
+    padding: 0rem 3.2rem;
+    box-sizing: border-box;
+    font-size: 1.6rem;
+    position: relative;
+    vertical-align: middle;
+}
+.healthy-panel-container .right-content h4 {
+    margin: 1.6rem 0rem 1.6rem;
+    font-size: 2rem;
+}
+.healthy-panel-container .right-content .p-content {
+    height: 6rem !important;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.healthy-panel-container .right-content p {
+    line-height: 230%;
+    margin: 0rem;
+    color: #666666;
+}
+
+.healthy-panel-container .right-content .decorate {
+    width: 100%;
+    text-align: right;
+    margin: 1rem 0rem;
+    color: #078E43;
+}
+.healthy-panel-container .right-content .decorate a {
+    color: #078E43;
+}

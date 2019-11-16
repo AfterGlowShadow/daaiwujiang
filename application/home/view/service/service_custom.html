@@ -1,0 +1,89 @@
+<link rel="stylesheet" href="/static/pv1/css/03.multiplexing.css" />
+<link rel="stylesheet" href="/home/css/manifest.min.css" />
+{include file="Public/header" /}
+	<div class="di-banner-container" style="background-image:url('{$banner['src']}')">
+		<div class="di-container">
+			<div class="left-wrap">
+				<p>TAILOR-MADE</p>
+				<p>量身定制</p>
+			</div>
+			<div class="right-wrap">
+				<p>健康医疗，标准化健康管理</p>
+			</div>
+		</div>
+	</div>
+	<div class="di-bread-crumbs">
+		<div class="di-container">
+			<ul class="crumbs-list">
+				<li>您的当前位置</li>
+				<li><a href="/">大爱无疆</a></li>
+				<li><a href="">体检服务</a></li>
+				<li><a href="">量身定制</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="di-container el-mt-20">
+		<div class="di-row el-mb-20">
+			<div class="di-col-6">
+				<div class="di-title-container">
+					<p class="en-name line-b-after">CUSTOMIZATION SERVICES</p>
+					<h1 class="cn-name">量身定制体检服务</h1>
+				</div>
+				<div class="service-custom-form di-form">
+					<input class="el-mb-20" id="form-name" type="text" value="" placeholder="您的姓名" />
+					<input class="el-mb-20" id="form-phone" type="text" value="" placeholder="联系方式" />
+					<textarea class="el-mb-20" id="form-content" value="" placeholder="请输入定制需求"></textarea>
+					<input id="form-url" type="hidden" value="{$messageurl}" />
+					<button class="btn-primary" id="form-button">确定提交</button>
+				</div>
+			</div>
+			<div class="di-col-4">
+				{if count($fuwulist) > 0}
+					{volist name="fuwulist" id="val"}
+						<div class="healthy-panel-container el-mb-20 service-menu">
+							<div class="left-image">
+								<img src="{$val.minspic}" />
+							</div>
+							<div class="right-content">
+								<h4><a href="{:url('/home/servicecheckupdetails')}?ctoken={$val.datoken}">{$val.title}</a></h4>
+								<p>{$val.description|raw}</p>
+								<p class="decorate">套餐价：￥{$val.price}</p>
+							</div>
+						</div>
+					{/volist}
+				{/if}
+			
+		<!-- 		<div class="healthy-panel-container el-mb-20 service-menu">
+					<div class="left-image">
+						<img src="/home/images/healthy-manage/healthy-check.png" />
+					</div>
+					<div class="right-content">
+						<h4>健康体检</h4>
+						<p>公司与国内外各大顶尖体检机 …</p>
+						<p class="decorate">套餐价：￥5000</p>
+					</div>
+				</div>
+				<div class="healthy-panel-container el-mb-20 service-menu">
+					<div class="left-image">
+						<img src="/home/images/healthy-manage/healthy-check.png" />
+					</div>
+					<div class="right-content">
+						<h4>健康体检</h4>
+						<p>公司与国内外各大顶尖体检机 …</p>
+						<p class="decorate">套餐价：￥5000</p>
+					</div>
+				</div> -->
+			</div>
+		</div>
+	</div>
+	<div class="di-footer">
+		<img class="dif-line" src="/home/images/home/footer-line.png" />
+	</div>
+	<div class="home-slide" id="partners">
+				<p id="slide-up"></p>
+				<ul>
+					<li><img src="" /></li>
+				</ul>
+				<p id="slide-down"></p>
+			</div>
+	{include file="Public/footer" /}

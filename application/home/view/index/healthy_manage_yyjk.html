@@ -1,0 +1,45 @@
+    <link rel="stylesheet" href="/static/pv1/css/01.normalize.css" />
+    <link rel="stylesheet" href="/static/pv1/css/02.base.css" />
+    <link rel="stylesheet" href="/static/pv1/css/03.multiplexing.css" />
+    <link rel="stylesheet" href="/static/pv1/css/healthy-manage.css" />
+    <link rel="stylesheet" href="/static/pv1/css/information-details.css" />
+{include file="Public/header" /}
+<div class="di-banner-container" style="background-image:url('/static/images/zixun/banner-zixun.png')">
+    <div class="di-container">
+        <div class="left-wrap">
+            <p>Information</p>
+            <p>健康管理</p>
+        </div>
+        <div class="right-wrap">
+            <p>健康医疗，标准化健康管理</p>
+        </div>
+    </div>
+</div>
+<div class="di-bread-crumbs">
+    <div class="di-container">
+        <ul class="crumbs-list">
+            <li>您的当前位置</li>
+            <li><a href="/">大爱无疆</a></li>
+            <li><a href="{:url('/home/healthymanage')}?ctoken={$val.datoken}">健康管理</a></li>
+            <li><a href="">营养膳食与运动方案管理</a></li>
+        </ul>
+    </div>
+</div>
+<div id="ServiceSubject">
+    <div class="di-container el-mt-20">
+        <div class="di-row el-mb-20 di-title" v-for="item in dataset">
+            <div class="di-title-container">营养膳食与运动方案管理</div>
+            <hr>
+        </div>
+        <div class="di-row el-mb-20 di-container-content">
+        <p>通过实现各种营养的均衡，帮助人们达到一种从身体到思想，健康、积极、富有理想的生活状态。</p>
+        <p>那么我们要如何追求自己的营养生活呢？</p>
+        <p>营养分析师将根据每位会员的身体情况、工作强度、饮食习惯等，制定出合理科学的膳食搭配及运动建议，让客户有效地改善膳食结构，增强会员健康体质。让均衡的饮食、合理的运动，成就您健康的体魄，投资健康，从饮食与运动开始。</p>
+<!--            <hr>-->
+        </div>
+    </div>
+</div>
+<div class="di-footer">
+    <img class="dif-line" src="/static/images/home/footer-line.png" />
+</div>
+    {include file="Public/footer" /}

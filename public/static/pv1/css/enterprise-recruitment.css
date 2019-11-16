@@ -1,0 +1,22 @@
+.di-container-content p{
+    line-height:2.4rem;
+}
+.di-type{
+    font-size: 2rem;
+    color: rgba(7,142,67,1);
+    padding-right: 2rem;
+}
+.di-title{
+
+}
+.di-container-content ol{
+    margin: 0;
+    padding: 0;
+    padding-left: 1.6rem;
+}
+.di-container-content li{
+    color: #999999;
+}
+.p-content{
+    color: #999999;
+}

@@ -1,0 +1,262 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>资讯动态</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <script src="/static/pv1/js/02.base.js"></script>
+    <script src="/static/pv1/js/01.vue.min.js"></script>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <!-- 引入组件库 -->
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+    <link rel="stylesheet" href="/static/pv1/css/01.normalize.css" />
+    <link rel="stylesheet" href="/static/pv1/css/02.base.css" />
+    <link rel="stylesheet" href="/static/pv1/css/03.multiplexing.css" />
+    <link rel="stylesheet" href="/static/pv1/css/healthy-manage.css" />
+    <link rel="stylesheet" href="/static/pv1/css/information.css" />
+</head>
+
+<body>
+<header class="di-header-container">
+    <div class="di-container di-header-wrap">
+        <div class="n-logo">
+            <img src="/static/images/home/logo.png" />
+        </div>
+        <div class="n-tel">
+            <img src="/static/images/home/tel.png" />
+        </div>
+    </div>
+    <div class="di-navigation">
+        <div class="di-container">
+            <ul class="n-nav">
+                <li><a href="">首页</a></li>
+                <li><a href="">健康管理</a></li>
+                <li><a href="">体检服务</a></li>
+                <li><a href="">全球医疗</a></li>
+                <li><a href="">医疗事务</a></li>
+                <li  class="n-active" v-on:click="controllerRequestDataset('1')"><a href="">资讯动态</a></li>
+                <li><a href="">关于大爱</a></li>
+                <li><a href="">联系我们</a></li>
+            </ul>
+        </div>
+    </div>
+</header>
+<div class="di-banner-container" style="background-image:url('/static/images/zixun/banner-zixun.png')">
+    <div class="di-container">
+        <div class="left-wrap">
+            <p>Information</p>
+            <p>资讯动态</p>
+        </div>
+        <div class="right-wrap">
+            <p>健康医疗，标准化健康管理</p>
+        </div>
+    </div>
+</div>
+<div class="di-bread-crumbs">
+    <div class="di-container">
+        <ul class="crumbs-list">
+            <li>您的当前位置</li>
+            <li><a href="/">大爱无疆</a></li>
+            <li><a href="">资讯动态</a></li>
+        </ul>
+    </div>
+</div>
+<div id="ServiceSubject">
+    <div class="di-container el-mt-20">
+        <div class="di-row el-mb-20" v-for="item in dataset">
+            <div class="di-col-6">
+                <div class="information-panel-container home-article-container">
+                    <div class="left-image">
+                        <img src="/static/images/healthy-manage/healthy-define.png" />
+                    </div>
+                    <div class="ha-list-wrap">
+                        <div class="ha-l-date">
+                            <div>
+                                <p>25</p>
+                                <p>2019-10</p>
+                            </div>
+                        </div>
+                        <div class="ha-l-content">
+                            <p><a href="">大爱无疆迎来了“峰峰服务中心”开业盛典！</a></p>
+                            <p>2019年7月21日，大爱无疆“峰峰服务中心”举行盛大开业仪式，大爱无疆健康产业发展集团副董事长仝军卓先</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="information-panel-container home-article-container">
+                    <div class="left-image">
+                        <img src="/static/images/healthy-manage/healthy-define.png" />
+                    </div>
+                    <div class="ha-list-wrap">
+                        <div class="ha-l-date">
+                            <div>
+                                <p>25</p>
+                                <p>2019-10</p>
+                            </div>
+                        </div>
+                        <div class="ha-l-content">
+                            <p><a href="">大爱无疆迎来了“峰峰服务中心”开业盛典！</a></p>
+                            <p>2019年7月21日，大爱无疆“峰峰服务中心”举行盛大开业仪式，大爱无疆健康产业发展集团副董事长仝军卓先</p>
+                        </div>
+                    </div>
+                </div>
+               <div class="zxf_pagediv"></div>
+
+                <script type="text/javascript">
+                //翻页
+                $(".zxf_pagediv").createPage({
+                    pageNum: 20,
+                    current: 6,
+                    backfun: function(e) {
+                        //console.log(e);//回调
+                    }
+                });
+                </script>
+            </div>
+            <div class="di-col-4">
+                <div class="information-panel-containerR">
+                    <div class="left-image">
+                        <img src="/static/images/zixun/redian.png" />
+                        <span>大爱无疆热点</span>
+                    </div>
+                    <div class="right-content">
+                        <ul>
+                            <li>
+                                <a href="">
+                                    <span>大爱无疆迎来了“峰峰服务中心”开业盛典！</span>
+                                    <span>2019-09-09</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span>大爱无疆迎来了“峰峰服务中心”开业盛典！</span>
+                                    <span>2019-09-09</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span>大爱无疆迎来了“峰峰服务中心”开业盛典！</span>
+                                    <span>2019-09-09</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span>大爱无疆迎来了“峰峰服务中心”开业盛典！</span>
+                                    <span>2019-09-09</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="information-panel-containerR">
+                    <div class="left-image">
+                        <img src="/static/images/zixun/taocan.png" />
+                        <span>钜惠体检套餐</span>
+                    </div>
+                </div>
+                <div class="">
+                    <div class="healthy-panel-container el-mb-20 service-menu">
+                        <div class="left-image">
+                            <img src="/static/images/healthy-manage/healthy-check.png" />
+                        </div>
+                        <div class="right-content">
+                            <h4>会员尊享体检套餐</h4>
+                            <p>公司与国内外各大顶尖体检机 …</p>
+                            <p class="decorate">套餐价：￥5000</p>
+                        </div>
+                    </div>
+                    <div class="healthy-panel-container el-mb-20 service-menu">
+                        <div class="left-image">
+                            <img src="/static/images/healthy-manage/healthy-check.png" />
+                        </div>
+                        <div class="right-content">
+                            <h4>健康体检</h4>
+                            <p>公司与国内外各大顶尖体检机 …</p>
+                            <p class="decorate">套餐价：￥5000</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="di-footer">
+    <img class="dif-line" src="/static/images/home/footer-line.png" />
+</div>
+<div class="di-footer-nav">
+    <div class="di-container fence-container">
+        <div class="left-container">
+            <dl class="average-item">
+                <dt>健康管理</dt>
+                <dd><a href="">健康管理定义</a></dd>
+                <dd><a href="">健康体检</a></dd>
+                <dd><a href="">建立电子健康档案</a></dd>
+                <dd><a href="">基因检测</a></dd>
+                <dd><a href="">癌症筛查</a></dd>
+                <dd><a href="">营养膳食与运动方案管理</a></dd>
+                <dd><a href="">医疗辅助与健康</a></dd>
+            </dl>
+            <dl class="average-item">
+                <dt>体检服务</dt>
+                <dd><a href="">个人体检</a></dd>
+                <dd><a href="">团体体检</a></dd>
+                <dd><a href="">入职体检</a></dd>
+                <dd><a href="">量身定制</a></dd>
+            </dl>
+            <dl class="average-item">
+                <dt>全球医疗</dt>
+                <dd><a href="">国内转诊</a></dd>
+                <dd><a href="">海外医疗</a></dd>
+            </dl>
+            <dl class="average-item">
+                <dt>医疗事务</dt>
+                <dd><a href="">家庭医疗事务协调</a></dd>
+                <dd><a href="">重大疾病治疗途径规划</a></dd>
+                <dd><a href="">私人医生服务</a></dd>
+                <dd><a href="">稀缺药品代购</a></dd>
+                <dd><a href="">名老中医预约</a></dd>
+                <dd><a href="">医疗援助</a></dd>
+            </dl>
+            <dl class="average-item">
+                <dt>关于大爱</dt>
+                <dd><a href="">集团简介</a></dd>
+                <dd><a href="">核心资源</a></dd>
+                <dd><a href="">资讯动态</a></dd>
+                <dd><a href="">企业文化</a></dd>
+                <dd><a href="">董事长寄语</a></dd>
+            </dl>
+            <dl class="average-item">
+                <dt>联系我们</dt>
+                <dd><a href="">公司地址</a></dd>
+                <dd><a href="">客服电话</a></dd>
+                <dd><a href="">微信二维码</a></dd>
+                <dd><a href="">企业招聘</a></dd>
+            </dl>
+        </div>
+        <div class="right-container">
+            <ul class="contact-list">
+                <li>
+                    <img src="/static/images/home/qr-code.png" />
+                </li>
+                <li class="number">微信公众号：hbdawj</li>
+                <li class="text">地址：河北省石家庄市平安北大街 158 号</li>
+                <li class="text-spacing">东胜广场 A 座 8 层</li>
+                <li class="text">联系电话：0311-6797997</li>
+            </ul>
+        </div>
+    </div>
+    <hr class="hr-line" />
+    <div class="di-container signature">
+        <p>大爱无疆健康产业有限公司 冀ICP备16012298号</p>
+        <p>2019 http://www.biglovewj.com All Right Reserved</p>
+    </div>
+</div>
+<script src="/static/pv1/js/information.js"></script>
+
+</body>
+
+</html>

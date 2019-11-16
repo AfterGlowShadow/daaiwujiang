@@ -1,0 +1,376 @@
+<link rel="stylesheet" href="/static/pv1/css/01.normalize.css" />
+<link rel="stylesheet" href="/static/pv1/css/02.base.css" />
+<link rel="stylesheet" href="/static/pv1/css/03.multiplexing.css" />
+<link rel="stylesheet" href="/static/pv1/css/home.css" />
+{include file="Public/header" /}
+<style>
+a { color: inherit; } 
+.n-desc p{
+	margin:0 auto;
+}
+.updateJkgl{
+	height: 60%;
+    width: 60%;
+    min-width: 1020px;
+    padding-bottom: 0px;
+}
+.updateTjfwYlsw{
+    width: 60%;
+    min-width: 1020px;
+}
+.home-healthy .np-elaborate .n-title-desc{
+	font-size:4rem;
+}
+.home-healthy .np-elaborate .n-title {
+	font-size:3rem;
+	left:0rem;
+}
+.home-healthy .np-elaborate .n-title-desc{
+	font-size:4rem;
+}
+.home-healthy .np-elaborate .n-head:after 
+{
+	left:0rem;
+}
+body{
+	font-size: 1.5rem;
+}
+.di-panel-container span {
+    font-size: 1.5rem;
+}
+.home-article-container {
+    width: 48%;
+}
+.di-panel-container img {
+    right: 0rem;
+}
+.home-article-container .ha-list-wrap .ha-l-date div p:last-child {
+    bottom: 2%;
+}
+.di-container {
+    width: 60%;
+    min-width: 1020px;
+}
+.h-nav-list{
+	height:70%
+}
+.home-product .h-nav-list {
+    margin-top: 13rem;
+}
+.hn-right{
+	width: 60%;
+}
+.np-service-nav{
+	height: 60%;
+}
+</style>
+
+	<div class="home-banner">
+		<img src="/static/images/home/banner.png" />
+	</div>
+	<div class="di-container home-healthy updateJkgl">
+		<img src="/static/images/home/jkgl.png">
+		<!--<div class="np-elaborate">
+			<div class="n-head">
+				<span class="n-title">健康管理</span>
+				<span class="n-title-desc">MANAGEMENT</span>
+			</div>
+			<div class="n-content">
+				<p>健康管理是指对健康人群、亚健康人群、疾病患者群的健康因素进行全面检测、分析、评估，并提供健康资讯和指导以及对健康危险因素进行干预的过程。预防或解决隐藏在人群中可能引起疾病的危险因素。其宗旨是调动个人及集体的积极性，充分利用有效的资源达到最大的健康改善效果。它是基于个人健康档案基础上的个性化健康事务管理服务，是建立在现代生物医学和信息化管理技术的模式上，从生物、心理、社会的角度对每个人进行全面的健康管理服务。
+					<span class="moreSpan" click="clickfunc()">[展开更多]</span>
+					<span class="moreSpan" id="hiddenS" click="clickfunc1()">[收起]</span>
+				</p>
+
+				<p id="lastP">早在1970年末，美国的商业保险公司率先向自己的保险客户推出了“健康管理”的服务。从“费用控制”的角度，并配以低成本的诊疗手段，在很大程度上提高了投保人群的健康状况，降低了医疗费用。这一系列举措使得政府和学术界认知了健康管理作为一门新兴学科，成为横跨经济管理学、伦理学、社会学、心理学和医学等多领域的边缘科学。</p>
+			</div>
+		</div>
+		<div class="np-service-nav">
+			<ul class="item-row">
+				<a href="{:url('/home/healthymanagejktj')}?ctoken=73f663f3a971ec5221c9c4ecf88d1aef"><li class="left-float">
+					<img class="i-act" src="/static/images/home/doctor-act.png" />
+					<img class="i-unc" src="/static/images/home/doctor-unc.png" />
+					<p>健康体检</p>
+				</li></a>
+				<a href="{:url('/home/healthymanagedzda')}?ctoken=73f663f3a971ec5221c9c4ecf88d1aef"><li>
+					<img class="i-act" src="/static/images/home/dossier-act.png" />
+					<img class="i-unc" src="/static/images/home/dossier-unc.png" />
+					<p>建立电子档案</p>
+				</li></a>
+				<a href="{:url('/home/healthymanagejyjc')}?ctoken=73f663f3a971ec5221c9c4ecf88d1aef"><li class="right-float">
+					<img class="i-act" src="/static/images/home/gene-act.png" />
+					<img class="i-unc" src="/static/images/home/gene-unc.png" />
+					<p>基因检测</p>
+				</li></a>
+			</ul>
+			<ul class="item-row">
+					<a href="{:url('/home/healthymanagezlsc')}?ctoken=73f663f3a971ec5221c9c4ecf88d1aef"><li class="left-float">
+						<img class="i-act" src="/static/images/home/tumour-act.png" />
+						<img class="i-unc" src="/static/images/home/tumour-unc.png" />
+						<p>肿瘤筛查</p>
+					</li></a>
+					<a href="{:url('/home/healthymanageyyjk')}?ctoken=73f663f3a971ec5221c9c4ecf88d1aef"><li>
+						<img class="i-act" src="/static/images/home/nutrition-act.png" />
+						<img class="i-unc" src="/static/images/home/nutrition-unc.png" />
+						<p>营养膳食与运动方案管理</p>
+					</li></a>
+					<a href="{:url('/home/healthymanageylkf')}?ctoken=73f663f3a971ec5221c9c4ecf88d1aef"><li class="right-float">
+						<img class="i-act" src="/static/images/home/auxiliary-act.png" />
+						<img class="i-unc" src="/static/images/home/auxiliary-unc.png" />
+						<p>医疗辅助与康复&nbsp;&nbsp;&nbsp;&nbsp;</p>
+					</li></a>
+				</ul>
+		</div>-->
+	</div>
+	<div class="di-container home-service updateTjfwYlsw">
+		<div class="n-left-cover">
+			<img src="/static/images/home/service-backa.png" />
+		</div>
+		<div class="n-right-content">
+			<div class="n-title">
+				<span style="font-size:3rem;">体检服务</span>
+				<span style="font-size:4rem;">SERVICE</span>
+			</div>
+			<div class="n-desc">
+				<p style="line-height:168%;">公司与国内外各大顶尖体检机构合作，让体检实现便捷化和普及化。</p>
+				<p style="line-height:168%;">通过医学手段和方法对客户进行身体检查，了解客户健康状况，收集客户有关健康的客观资料，发现亚健康状态和预防某种疾病的发生，同时整合先进的检测设备、专业的技术水平、经验丰富的专家医疗资源团队，为客户提供检后维护等服务。 </p>
+				<p style="line-height:168%;">客户可获得最低折扣、最新项目的体检套餐，我们会根据您的身体情况提供合理的体检意见，也可以根据自身情况自主选择体检项目。 </p>
+				<p style="line-height:168%;">定期体检，随着年龄的增长，补充新的项目、新的内容，实现早发现、早诊断、早治疗。缩短治疗时间，减少医疗费用，去除健康隐患。 </p>
+				<p style="line-height:168%;">汇集全球的体检机构，带给您最专业的医疗体检。</p>
+			</div>
+		</div>
+		<ul class="n-bottom-button">
+			<li><a href="{$column[2]['child'][1]['url']}?ctoken={$column[2]['child'][1]['datoken']}"><img src="/home/images/home/physical-examination.png" /></a></li>
+			<li><a href="{$column[2]['child'][2]['url']}?ctoken={$column[2]['child'][2]['datoken']}"><img src="/home/images/home/organization.png" /></a></li>
+			<li><a href="{$column[2]['child'][0]['url']}?ctoken={$column[2]['child'][0]['datoken']}"><img src="/home/images/home/physical-examination-rz.png" /></a></li>
+			<li><a href="{$column[2]['child'][3]['url']}?ctoken={$column[2]['child'][3]['datoken']}"><img src="/home/images/home/customized.png" /></a></li>
+		</ul>
+<!--		<ul class="n-bottom-button">-->
+<!--			<li><img src="/static/images/home/physical-examination.png" /></li>-->
+<!--			<li><img src="/static/images/home/organization.png" /></li>-->
+<!--			<li><img src="/static/images/home/physical-examination-rz.png" /></li>-->
+<!--			<li><img src="/static/images/home/customized.png" /></li>-->
+<!--		</ul>-->
+	</div>
+	<div class="di-container home-medical-affairs updateTjfwYlsw">
+		<div class="h-title">
+			<span>医疗事务</span>
+			<span>MEDICAL AFFAIRS</span>
+		</div>
+		<div class="h-panel-three">
+			<div class="h-three-margin">
+				<div class="di-panel-container">
+					<h2>家庭医疗事务协调</h2>
+					<p>COORDINATION OF FAMILY<br/>MEDICAL AFFAIRS</p>
+					<a href="{:url('/home/medicalaffairs')}?ctoken=107b407b9bc6fea539a280f92e1ff0d0"><span>查看详情</span></a>
+					<img src="/static/images/home/family.png" />
+				</div>
+			</div>
+			<div class="h-three-margin">
+				<div class="di-panel-container">
+					<h2>重大疾病治疗途径规划</h2>
+					<p>PLANNING OF TREATMENT PATHWAYS FOR<br/>MAJOR DISEASES</p>
+					<a href="{:url('/home/medicalaffairs')}?ctoken=107b407b9bc6fea539a280f92e1ff0d0"><span>查看详情</span></a>
+					<img src="/static/images/home/doctor.png" />
+				</div>
+			</div>
+			<div class="h-three-margin">
+				<div class="di-panel-container">
+					<h2>私人医生服务</h2>
+					<p>PRIVATE DOCTOR SERVICE</p>
+					<a href="{:url('/home/medicalaffairs')}?ctoken=107b407b9bc6fea539a280f92e1ff0d0"><span>查看详情</span></a>
+					<img src="/static/images/home/dossier.png" />
+				</div>
+			</div>
+		</div>
+		<div class="h-panel-two">
+			<div class="h-two-margin">
+				<div class="di-panel-container">
+					<h2>稀缺药品代购</h2>
+					<p>DELIVERY OF RARE DRUGS</p>
+					<a href="{:url('/home/medicalaffairs')}?ctoken=107b407b9bc6fea539a280f92e1ff0d0"><span>查看详情</span></a>
+					<img src="/static/images/home/drugs.png" />
+				</div>
+			</div>
+			<div class="h-two-margin">
+				<div class="di-panel-container">
+					<h2>知名老中医预约</h2>
+					<p>WELL-KNOWN OLD CHINESE MEDICINE<br/>MAKE AN APPOINTMENT</p>
+					<a href="{:url('/home/medicalaffairs')}?ctoken=107b407b9bc6fea539a280f92e1ff0d0"><span>查看详情</span></a>
+					<img src="/static/images/home/zhong-yi.png" />
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="home-product">
+		<div class="di-container">
+			<div class="h-product-list">
+				<div class="hl-left">
+					<dl class="dl-panel-simple">
+						<dt class="h-bk-a">体验A类客户</dt>
+						<dd>健康管理</dd>
+						<dd>家庭医疗事务</dd>
+						<dd>体检服务</dd>
+						<dd>海外医疗服务费9.8折</dd>
+						<dd>私人医生服务资讯</dd>
+						<dd>高端基因检测</dd>
+						<dd class="h-price h-bk-aprice">大爱体验价：￥<span>4890</span></dd>
+					</dl>
+					<dl class="dl-panel-simple el-mt-20">
+						<dt class="h-bk-c">体验C类客户</dt>
+						<dd>健康管理</dd>
+						<dd>家庭医疗事务</dd>
+						<dd>体检服务</dd>
+						<dd>海外医疗服务费9.8折</dd>
+						<dd>私人医生服务资讯</dd>
+						<dd>高端基因检测</dd>
+						<dd class="h-price h-bk-cprice">大爱体验价：￥<span>9870</span></dd>
+					</dl>
+				</div>
+				<div class="hl-right">
+					<dl class="dl-panel-simple">
+						<dt class="h-bk-b">体验B类客户</dt>
+						<dd>健康管理</dd>
+						<dd>家庭医疗事务</dd>
+						<dd>体检服务</dd>
+						<dd>海外医疗服务费9.8折</dd>
+						<dd>私人医生服务资讯</dd>
+						<dd>高端基因检测</dd>
+						<dd class="h-price h-bk-bprice">大爱体验价：￥<span>7780</span></dd>
+					</dl>
+					<dl class="dl-panel-simple el-mt-20">
+						<dt class="h-bk-d">体验D类客户</dt>
+						<dd>健康管理</dd>
+						<dd>家庭医疗事务</dd>
+						<dd>体检服务</dd>
+						<dd>海外医疗服务费9.8折</dd>
+						<dd>私人医生服务资讯</dd>
+						<dd>高端基因检测</dd>
+						<dd class="h-price h-bk-dprice">大爱体验价：￥<span>12360</span></dd>
+					</dl>
+				</div>
+			</div>
+			<div class="h-product-nav">
+				<div class="di-title-left-align">
+					<span>产品信息</span>
+					<span>PRODUCT</span>
+				</div>
+				<div class="h-nav-list">
+					<div class="hn-left">
+						<dl class="hn-left-active">
+							<dt>体验客户</dt>
+							<dd>(服务期限3年)</dd>
+						</dl>
+						<dl>
+							<dt>尊享客户</dt>
+							<dd>(服务期限至70周岁)</dd>
+						</dl>
+					</div>
+					<div class="hn-right">
+						<img src="/static/images/home/product-info.png" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="home-cooperative">
+		<div class="di-container">
+			<div class="hc-title">
+				<span>合作机构</span>
+				<span>COOPERATIVE</span>
+			</div>
+			<p class="hc-desc">只和权威的顶级的国内外健康医疗机构合作</p>
+		</div>
+		<div class="di-container">
+			<div class="home-slide" id="partners">
+				<p id="slide-up">△</p>
+				<ul>
+					<!--<li><img src="/static/images/partners/01.jpg" /></li>-->
+					<li><img src="/static/images/partners/02.jpg" /></li>
+					<li><img src="/static/images/partners/03.jpg" /></li>
+					<li><img src="/static/images/partners/04.jpg" /></li>
+					<li><img src="/static/images/partners/05.jpg" /></li>
+					<!--<li><img src="/static/images/partners/06.jpg" /></li>-->
+					<li><img src="/static/images/partners/07.jpg" /></li>
+					<li><img src="/static/images/partners/08.jpg" /></li>
+					<li><img src="/static/images/partners/09.jpg" /></li>
+					<li><img src="/static/images/partners/10.jpg" /></li>
+					<li><img src="/static/images/partners/11.jpg" /></li>
+					<li><img src="/static/images/partners/12.jpg" /></li>
+					<li><img src="/static/images/partners/13.jpg" /></li>
+				</ul>
+				<p id="slide-down">▽</p>
+			</div>
+		</div>
+	</div>
+	<div class="di-container">
+		<div class="home-article-container el-mt-60">
+			<div class="hal-row-left">
+				<div class="di-title-left-align el-mb-20">
+					<span>公司动态</span>
+					<span>NEWS</span>
+				</div>
+				{if count($xinwen) > 0}
+					{volist name="xinwen" id="val"}
+						<div class="ha-list-wrap">
+							<div class="ha-l-date">
+								<div>
+									<p>{$val.day}</p>
+									<p>{$val.create_time}</p>
+								</div>
+							</div>
+							<div class="ha-l-content">
+								<p><a href="{:url('/home/informationdetails')}?ctoken={$val.datoken}">{$val.title}</a></p>
+								<p>{$val.description|raw}</p>
+							</div>
+						</div>
+					{/volist}
+				{/if}
+			</div>
+		</div>
+		<div class="home-article-container el-mt-60">
+			<div class="hal-row-right">
+				<div class="di-title-left-align el-mb-20">
+					<span>政策导向</span>
+					<span>POLICY</span>
+				</div>
+				{if count($daoxiang) > 0}
+					{volist name="daoxiang" id="val"}
+						<div class="ha-list-wrap">
+							<div class="ha-l-date">
+								<div>
+									<p>{$val.day}</p>
+									<p>{$val.create_time}</p>
+								</div>
+							</div>
+							<div class="ha-l-content">
+								<p><a href="{:url('/home/informationdetails')}?ctoken={$val.datoken}">{$val.title}</a></p>
+								<p>{$val.description|raw}</p>
+							</div>
+						</div>
+					{/volist}
+				{/if}
+			</div>
+		</div>
+	</div>
+	<div class="di-footer">
+		<img class="dif-line" src="/static/images/home/footer-line.png" />
+	</div>
+	<div class="di-footer-form">
+		<div class="di-container">
+			<div class="left-column">
+				<input class="el-mb-10" type="text" id="form-name" value="" placeholder="您的姓名" />
+				<input id="form-phone" type="text" value="" placeholder="联系方式" />
+			</div>
+			<div class="middle-column">
+				<textarea id="form-content" value="" placeholder="请输入您的问题或者建议"></textarea>
+			</div>
+			<div class="right-column">
+				<input id="form-url" type="hidden" value="" />
+				<button id="form-button">提交</button>
+			</div>
+		</div>
+	</div>
+<script src="/static/pv1/js/02.base.js"></script>
+<script src="/static/pv1/js/03.multiplexing.js"></script>
+<script src="/static/pv1/js/index.js"></script>
+{include file="Public/footer" /}

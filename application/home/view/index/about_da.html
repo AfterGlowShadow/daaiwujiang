@@ -1,0 +1,160 @@
+{include file="Public/header" /}
+    <link rel="stylesheet" href="/static/pv1/css/01.normalize.css" />
+    <link rel="stylesheet" href="/static/pv1/css/02.base.css" />
+    <link rel="stylesheet" href="/static/pv1/css/03.multiplexing.css" />
+    <link rel="stylesheet" href="/static/pv1/css/04.title-style.css" />
+    <link rel="stylesheet" href="/static/pv1/css/04.title-style.css" />
+    <link rel="stylesheet" href="/static/pv1/css/home.css" />
+    <link rel="stylesheet" href="/static/pv1/css/about.css">
+<div class="di-banner-container" style="background-image:url('/static/images/about/banner-guanyu.png')">
+    <div class="di-container">
+        <div class="left-wrap">
+            <p>ABOUT US</p>
+            <p>关于大爱</p>
+        </div>
+        <div class="right-wrap">
+            <p>健康医疗，标准化健康管理</p>
+        </div>
+    </div>
+</div>
+<div class="di-bread-crumbs">
+    <div class="di-container">
+        <ul class="crumbs-list">
+            <li>您的当前位置</li>
+            <li><a href="/">大爱无疆</a></li>
+            <li><a href="">关于大爱</a></li>
+        </ul>
+    </div>
+</div>
+<div class="di-container el-mt-20 about">
+    <div class="di-row el-mb-20">
+        <div class="di-col-4">
+            <div class="di-title-container">
+                <p class="en-name line-b-after">GROUP INTRODUCTION</p>
+                <h1 class="cn-name"> <a name="jituanjianjie">集团简介</a></h1>
+            </div>
+            <div class="di-left-content">
+                <P>
+                    {$qyinfo.introduction}
+<!--                    大爱无疆健康产业发展集团正式组建于2017年，总部位于河北省石家庄市，是专注于标准化健康管理、医疗管理、体检中心建设管理运营（bot）的专业服务机构。集团致力于健康医疗资源的整合与创新，依托于“互联网、大数据+健康医疗”的思维搭建平台，并汇集高级健康管理师和顶级医疗专家，以科学的医疗健康管理技术和手段唤醒与强化国民健康管理意识，本着早发现、早诊断、早治疗的健康管理基本原则为客户及时解决疾病隐患，防止小病生成大病，为客户减少医疗费用的支出，防止因病致贫、返贫,为全民健康保驾护航。-->
+
+<!--                    集团旗下有河北大爱无疆健康管理有限公司、山东大爱无疆健康管理有限公司、河南大爱无疆健康管理有限公司等各地子（分）公司为各区域客户提供服务。-->
+                </P>
+            </div>
+        </div>
+        <div class="di-col-6 about-right">
+            <div class="el-mb-20">
+                <div class="left-image el-text-right">
+                    <div class="bottom-img">
+                        <img src="/static/images/healthy-manage/healthy-assist.png" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="di-container about-Title  el-mb-30">
+    <div class="di-row">
+        <div class="n-title"><a name="hexinziyuan">核心资源</a></div>
+        <div class="n-content">CORE RESOURCES</div>
+    </div>
+    <div class="about-four-img di-row el-text-center">
+        <div class="about-four-div di-col-2">
+            <img class="about-four-img-h" src="/static/images/about/jiankang.png" alt="">
+            <img class="about-four-img-s" src="/static/images/about/jiankangS.png" alt="">
+            <hr>
+            <p>健康管理</p>
+        </div>
+        <div class="about-four-div di-col-2">
+            <img class="about-four-img-h" src="/static/images/about/fuwu.png" alt="">
+            <img class="about-four-img-s" src="/static/images/about/fuwuS.png" alt="">
+            <hr>
+            <p>体检服务</p>
+        </div>
+        <div class="about-four-div di-col-2">
+            <img class="about-four-img-h" src="/static/images/about/help.png" alt="">
+            <img class="about-four-img-s" src="/static/images/about/helpS.png" alt="">
+            <hr>
+            <p>社会救助</p>
+        </div>
+        <div class="about-four-div di-col-2">
+            <img class="about-four-img-h" src="/static/images/about/shangye.png" alt="">
+            <img class="about-four-img-s" src="/static/images/about/shangyeS.png" alt="">
+            <hr>
+            <p>商业医疗包机</p>
+        </div>
+        <div class="about-four-div di-col-2">
+            <img class="about-four-img-h" src="/static/images/about/zhuanche.png" alt="">
+            <img class="about-four-img-s" src="/static/images/about/zhuancheS.png" alt="">
+            <hr>
+            <p>医务专车</p>
+        </div>
+    </div>
+</div>
+<div class="di-container about-bj  el-mb-30" style="background-image: url('/static/images/about/beijing.png')">
+    <div class="di-row">
+        <div class="n-title"><a name="zixundongtai">资讯动态</a></div>
+        <div class="n-content">INFORMATION</div>
+    </div>
+    <div class="about-information di-row el-text-center">
+        {if count($zixun) > 0}
+            {volist name="zixun" id="val"}
+            <div class="ha-list-wrap di-col-4">
+                <div class="ha-l-date">
+                    <div>
+                        <p>{$val.day}</p>
+                        <p>{$val.create_time}</p>
+                    </div>
+                </div>
+                <div class="ha-l-content el-text-left">
+                    <p><a href="{:url('/home/informationdetails')}?ctoken={$val.datoken}">{$val.title}</a></p>
+                    <p>{$val.description|raw}</p>
+                </div>
+            </div>
+            {/volist}
+        {/if}
+    </div>
+    <div class="di-row">
+        <div class="n-title"><a name="qiyewenhua">企业文化</a></div>
+        <div class="n-content">CORPORATE CULTURE</div>
+    </div>
+</div>
+<div class="about-corporate di-container di-row ">
+    <div class="di-col-2">
+        <img src="/static/images/about/01.png" alt="">
+    </div>
+    <div class="di-col-2">
+        <img src="/static/images/about/02.png" alt="">
+    </div>
+    <div class="di-col-2">
+        <img src="/static/images/about/03.png" alt="">
+    </div>
+    <div class="di-col-2">
+        <img src="/static/images/about/04.png" alt="">
+    </div>
+</div>
+<!--<div class="di-banner-container-about" >-->
+<!--    <img src="/static/images/about/jiyu.png" alt="">-->
+<!--</div>-->
+<a name="dongshizhang"></a>
+<!-- <div class="di-banner-container di-banner-container-about" style="background-image:url('/static/images/about/jiyu.png')"> -->
+<div class="di-banner-container di-banner-container-about" >
+    <img src="/static/images/about/jiyu.png" alt="">
+</div>
+<!--    <div class="di-container">-->
+<!--        <div class="left-wrap">-->
+<!--&lt;!&ndash;            <p>ABOUT US</p>&ndash;&gt;-->
+<!--&lt;!&ndash;            <p>关于大爱</p>&ndash;&gt;-->
+<!--        </div>-->
+<!--        <div class="right-wrap">-->
+<!--&lt;!&ndash;            <p>健康医疗，标准化健康管理</p>&ndash;&gt;-->
+<!--        </div>-->
+<!--    </div>-->
+<script src="/static/pv1/js/02.base.js"></script>
+<script src="/static/pv1/js/03.multiplexing.js"></script>
+<script src="/static/pv1/js/index.js"></script>
+<div class="di-footer">
+
+    <img class="dif-line" src="/static/images/home/footer-line.png" />
+</div>
+    {include file="Public/footer" /}

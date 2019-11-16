@@ -1,0 +1,47 @@
+.di-title{
+    text-align: center;
+}
+.di-row .di-title-container{
+    font-size:2.4rem;
+    font-weight:400;
+    color:rgba(51,51,51,1);
+    line-height:3.6rem;
+    /*text-align: center;*/
+}
+.di-row .di-time{
+    font-size:1.4rem;
+    color:rgba(153,153,153,1);
+    line-height:3.6rem;
+    padding-bottom: 2rem;
+}
+.di-row hr{
+    background-color:#EEEEEE;
+    height:0.1rem;
+    border:none;
+}
+.di-container-content p{
+    font-size:1.6rem;
+    color:rgba(51,51,51,1);
+    line-height:3.6rem;
+    text-indent: 2em;
+}
+.di-container-content .img{
+    text-indent: 0;
+    text-align: center;
+}
+.di-page{
+    float: left;
+    font-size:1.6rem;
+    font-weight:400;
+    line-height:3.6rem;
+    width: 100%;
+    padding-bottom: 9rem;
+}
+.di-row .previous a{
+    color: #078E43 !important;
+    float: left;
+}
+.di-row .next a{
+    float: right;
+    color: #333333
+}

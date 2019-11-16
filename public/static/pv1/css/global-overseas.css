@@ -1,0 +1,131 @@
+.di-container{
+    position: relative;
+}
+.global-overseas{
+    margin-top: 9rem !important;
+}
+.di-left-content{
+    line-height:2rem ;
+}
+.di-left-content .title{
+    color: #078E43;
+}
+.di-left-content p{
+    color: #333333;
+    line-height: 230%;
+}
+.global-overseas-right{
+    padding-left: 10rem !important;
+    position: absolute;
+    z-index: 2;
+    white-space: nowrap;
+}
+.global-overseas-right .left-image{
+    float: left;
+    box-sizing: border-box;
+}
+.global-overseas-right .left-image img.bottom-img{
+    position: relative;
+    top: 8rem;
+}
+.hr-green{
+    position: relative;
+    z-index: -1;
+    top: 12rem;
+}
+.n-title{
+    /*padding-top: 2.7rem;*/
+    padding-bottom: 1.6rem;
+    position: relative;
+    text-align: center;
+    font-size: 2.4rem;
+    color: #333333;
+}
+.n-title:after {
+    content: "";
+    position: absolute;
+    opacity: 0.7;
+    left: 46%;
+    right: 46%;
+    bottom: 0rem;
+    border-bottom: 0.4rem solid #078E43;
+}
+.n-content{
+    position: relative;
+    text-align: center;
+    font-size:1rem;
+    font-weight:400;
+    color:rgba(102,102,102,1);
+    padding-top:1.2rem;
+    padding-bottom: 6.5rem;
+}
+.global-overseas-title{
+    margin-top: 18rem;
+}
+.home-slide {
+    position: relative;
+    margin: 0rem -0.8rem;
+    width: 100%;
+}
+.home-slide .img {
+    margin: 0rem;
+    padding: 0rem;
+    line-height: 0%;
+    font-size: 6rem;
+    color: #000;
+    cursor: pointer;
+}
+.home-slide img#slide-up {
+    position: absolute;
+    top: 20rem;
+    left: 0;
+}
+.home-slide img#slide-down {
+    position: absolute;
+    top: 20rem;
+    right: 0;
+}
+
+.home-slide ul {
+    position: absolute;
+    width: 88%;
+    font-size: 0rem;
+    margin: 0rem;
+    padding: 0rem;
+    z-index: 111111;
+    left:6%;
+    list-style-type: none;
+    overflow: hidden;
+}
+.home-slide ul li {
+    float: left;
+    width: 48%;
+    height: 100%;
+    background: #F4F8F6;
+    box-sizing: border-box;
+    margin: 0  1%;
+}
+.home-slide ul li img{
+    width: 100%;
+}
+.home-slide ul li p{
+    padding: 3.4rem 0;
+}
+.home-slide ul li .p-title{
+    font-size: 2rem;
+    color: #333333;
+}
+.home-slide ul li .p-content{
+    color: #666666;
+    padding: 0 5%;
+    font-size: 1.6rem;
+    display: inline-block;
+    line-height: 2rem;
+}
+.home-slide ul li p .hr{
+    width: 10%;
+    height: 0.4rem;
+    background: #FFCC00;
+    display: inline-block;
+    margin: 2rem 0;
+}
